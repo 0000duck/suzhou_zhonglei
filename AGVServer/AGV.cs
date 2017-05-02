@@ -41,6 +41,7 @@ namespace AGV
             AGVInitialize.getInitialize().getSchedule().startShedule();
 
 
+            AGVInitialize.getInitialize().getAGVMessage().setUsbGreenLed();  //default green led
             AGVInitialize.getInitialize().getAGVMessage().StartHandleMessage();
             int i = 0;
             //while(i < 1)

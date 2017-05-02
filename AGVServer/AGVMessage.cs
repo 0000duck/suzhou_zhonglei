@@ -240,6 +240,14 @@ namespace AGV
             }
         }
 
+        public void setUsbGreenLed()  //default set green led
+        {
+            if (AGVInitialize.useUsbAlarm)
+            {
+                JG_SetUSBAlarmLamp(0, 0, 0, 1, 0, 0, 0, 0, 0);
+            }
+        }
+
         /// <summary>
         /// 清除USB报警灯
         /// </summary>
@@ -248,6 +256,7 @@ namespace AGV
             try
             {
                 JG_Clear(0);
+                setUsbGreenLed();
             }
             catch (Exception ex)
             {
